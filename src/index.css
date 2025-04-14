@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+  
+  /* Webkit-based browsers */
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+
+  
