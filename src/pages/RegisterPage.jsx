@@ -25,7 +25,7 @@ const RegisterPage = () => {
 
   return (
 <>
-<div >
+<div  className=''>
       <Image imgSrc={Logo} imgAlt="logo.png" className="w-56 mx-auto mt-1" />
 
       {/* Content */}

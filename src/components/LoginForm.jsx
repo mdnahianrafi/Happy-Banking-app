@@ -54,7 +54,7 @@ const LoginForm = ({ setUser }) => {
   };
 
   return (
-    <div >
+    <div className=''>
       <Image imgSrc={Logo} imgAlt="logo.png" className="w-56 mx-auto mt-1" />
 
       <div className="mt-[132px] mb-[120px] mx-2 rounded-sm shadow-lg bg-white">
