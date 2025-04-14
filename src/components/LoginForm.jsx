@@ -137,7 +137,7 @@ const LoginForm = ({ setUser }) => {
         </div>
       </div>
 
-<StickyNav/>
+
     </div>
   );
 };

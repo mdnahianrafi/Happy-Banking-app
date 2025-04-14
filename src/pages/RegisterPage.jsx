@@ -190,7 +190,7 @@ const RegisterPage = () => {
 
 
     </div>
-<StickyNav/>
+
 </>
 
   );
