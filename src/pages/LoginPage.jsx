@@ -5,7 +5,7 @@ export default function LoginPage({ setUser }) {
  
 
   return (
-    <div className="container mx-auto">
+    <div className="">
 <LoginForm setUser={setUser}/>
     </div>
   );

@@ -12,6 +12,7 @@ import { MdLogin } from 'react-icons/md';
 import Logo from '../assets/logo.svg';
 import Image from './Image';
 import { Link, useNavigate } from 'react-router-dom';
+import StickyNav from './StickyNav';
 
 const LoginForm = ({ setUser }) => {
   const navigate = useNavigate();
@@ -53,7 +54,7 @@ const LoginForm = ({ setUser }) => {
   };
 
   return (
-    <div className="md:mt-[74px] mx-auto w-full h-full md:w-[366px] md:h-[662px] md:border-[6px] md:border-black rounded-3xl bg-[#F4F8FB] drop-shadow-lg">
+    <div >
       <Image imgSrc={Logo} imgAlt="logo.png" className="w-56 mx-auto mt-1" />
 
       <div className="mt-[132px] mb-[120px] mx-2 rounded-sm shadow-lg bg-white">
@@ -136,29 +137,7 @@ const LoginForm = ({ setUser }) => {
         </div>
       </div>
 
-      <div className="bg-white flex justify-between rounded-b-lg px-3 py-[10px] absolute w-full bottom-[6px]">
-        <Link to="/" className="flex flex-col items-center">
-          <FaHome className="text-base" />
-          <p className="text-sm">Home</p>
-        </Link>
-        <Link to="/" className="flex flex-col items-center">
-          <MdLogin className="text-base" />
-          <p className="text-sm">Login</p>
-        </Link>
-
-        <Link to="/register-page" className="flex flex-col items-center">
-          <FaUserPlus className="text-base" />
-          <p className="text-sm">Register</p>
-        </Link>
-        <a href="#" className="flex flex-col items-center">
-          <FaBook className="text-base" />
-          <p className="text-sm">Blog</p>
-        </a>
-        <a href="#" className="flex flex-col items-center">
-          <IoIosCall className="text-base" />
-          <p className="text-sm">Contact</p>
-        </a>
-      </div>
+<StickyNav/>
     </div>
   );
 };

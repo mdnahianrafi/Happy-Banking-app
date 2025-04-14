@@ -10,6 +10,7 @@ import { MdLogin } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { FaBriefcase } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
+import StickyNav from '../components/StickyNav';
 
 const RegisterPage = () => {
   const [gender, setGender] = useState('');
@@ -24,7 +25,7 @@ const RegisterPage = () => {
 
   return (
 <>
-<div className="md:mt-[74px] mx-auto w-full h-full md:w-[366px] md:h-[662px] md:border-[6px] md:border-black rounded-3xl bg-[#F4F8FB] drop-shadow-lg relative overflow-y-scroll">
+<div >
       <Image imgSrc={Logo} imgAlt="logo.png" className="w-56 mx-auto mt-1" />
 
       {/* Content */}
@@ -132,30 +133,40 @@ const RegisterPage = () => {
 
           {/* Password */}
 <div>
-<p className='text-[#464646] text-base leading-6'>Address <span className='text-red-500'>(required)</span></p>
-          <div className="relative flex items-center mt-2">
+
+          <div className="relative  mt-2">
          
-            <FaLock className="absolute ml-3 text-gray-500" />
-            <input
-              name="password"
-              type={showPassword ? 'text' : 'password'}
-              placeholder="Password"
-              className="w-full pl-10 pr-10 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-300"
-              required
-            />
+          <div>
+            <p className='text-[#464646] text-base leading-6'>Password <span className='text-red-500'>(required)</span></p>
+            <div className="flex my-1">
+              <label><FaLock className="p-3 text-gray-600 text-4xl bg-gray-300 rounded-l-lg" /></label>
+              <input  type={showPassword ? 'text' : 'password'} name="address" placeholder='Password' className='pl-1 py-1 focus:outline-none border border-gray-300 rounded-r-lg w-full' required />
+            </div>
+          </div>
             <div
-              className="absolute right-3 cursor-pointer"
+              className="absolute right-3 top-9 cursor-pointer"
               onClick={togglePasswordVisibility}
             >
               {showPassword ? <FaEyeSlash className="text-gray-500" /> : <FaEye className="text-gray-500" />}
             </div>
           </div>
+
+          <div>
+            <p className='text-[#464646] text-base leading-6'>Confirm Password <span className='text-red-500'>(required)</span></p>
+            <div className="flex my-1">
+              <label><FaLock className="p-3 text-gray-600 text-4xl bg-gray-300 rounded-l-lg" /></label>
+              <input  type={showPassword ? 'text' : 'password'} name="address" placeholder='Password' className='pl-1 py-1 focus:outline-none border border-gray-300 rounded-r-lg w-full' required />
+            </div>
+          </div>
+</div>
+<div>
+
 </div>
 
 
-<div className="flex my-2">
+<div className="flex my-2 gap-x-2">
   <input type="checkbox" name="" id="" />
-  Agree with <span className='text-[#F7961D]'><a href=""> Terms & Conditions</a></span>
+  Agree with <span className='text-[#F7961D] '><a href=""> Terms & Conditions</a></span>
 </div>
 
 
@@ -177,33 +188,9 @@ const RegisterPage = () => {
         </div>
       </div>
 
-{/* Bottom Menu */}
-<div className="bottom_nav sticky bottom-0 left-0 w-full z-20">
-  <div className="bg-white flex justify-between rounded-b-lg px-3 py-[10px]">
-    <Link to="/" className="flex flex-col items-center">
-      <FaHome className="text-base" />
-      <p className="text-sm">Home</p>
-    </Link>
-    <Link to="/" className="flex flex-col items-center">
-      <MdLogin className="text-base" />
-      <p className="text-sm">Login</p>
-    </Link>
-    <Link to="/register-page" className="flex flex-col items-center">
-      <FaUserPlus className="text-base" />
-      <p className="text-sm">Register</p>
-    </Link>
-    <a href="#" className="flex flex-col items-center">
-      <FaBook className="text-base" />
-      <p className="text-sm">Blog</p>
-    </a>
-    <a href="#" className="flex flex-col items-center">
-      <IoIosCall className="text-base" />
-      <p className="text-sm">Contact</p>
-    </a>
-  </div>
-</div>
 
     </div>
+<StickyNav/>
 </>
 
   );
