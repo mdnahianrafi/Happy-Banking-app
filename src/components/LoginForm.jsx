@@ -62,26 +62,26 @@ const LoginForm = ({ setUser }) => {
         </h3>
 
         <div className="flex m-3">
-          <IoIosCall className="p-2 text-gray-600 text-3xl bg-gray-300 rounded-l-lg" />
+          <IoIosCall className="p-4 text-gray-600 text-5xl bg-gray-300 rounded-l-lg" />
           <input
             type="text"
             placeholder="Phone number"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             required
-            className="p-1 bg-[#E8F0FE] w-full rounded-r-lg focus:outline-none"
+            className="p-3 bg-[#E8F0FE] w-full rounded-r-lg focus:outline-none"
           />
         </div>
 
         <div className="relative flex m-3">
-          <FaLock className="p-2 text-3xl text-gray-600 bg-gray-300 rounded-l-lg" />
+          <FaLock className="p-4 text-gray-600 text-5xl bg-gray-300 rounded-l-lg" />
           <input
             type={showPassword ? 'text' : 'password'}
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="p-1 bg-[#E8F0FE] w-full pr-10 rounded-r-lg focus:outline-none"
+            className="p-3 bg-[#E8F0FE] w-full pr-10 rounded-r-lg focus:outline-none"
           />
           <button
             type="button"
@@ -136,7 +136,7 @@ const LoginForm = ({ setUser }) => {
         </div>
       </div>
 
-      <div className="bg-white flex justify-between rounded-b-lg px-3 py-[10px]">
+      <div className="bg-white flex justify-between rounded-b-lg px-3 py-[10px] absolute w-full bottom-[6px]">
         <Link to="/" className="flex flex-col items-center">
           <FaHome className="text-base" />
           <p className="text-sm">Home</p>

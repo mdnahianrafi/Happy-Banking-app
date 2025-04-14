@@ -155,7 +155,7 @@ const RegisterPage = () => {
 
 <div className="flex my-2">
   <input type="checkbox" name="" id="" />
-  Agree with <span className='text-[#F7961D]'><a href="">Terms & Conditions</a></span>
+  Agree with <span className='text-[#F7961D]'><a href=""> Terms & Conditions</a></span>
 </div>
 
 
